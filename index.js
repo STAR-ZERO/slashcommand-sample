@@ -28,5 +28,14 @@ controller.setupWebserver(process.env.port, function(err, webserver) {
 controller.on('slash_command', function(bot, message) {
   if ('/hello' === message.command) {
     bot.replyPublic(message, 'Hello!');
+
+    // bot.replyPrivate(message, 'Hello!');
+
+    // message.text = 'Hello!';
+    // message.attachments = [{
+    //   text: 'Attachement text',
+    //   image_url: 'https://octodex.github.com/images/original.png'
+    // }];
+    // bot.replyPublic(message, message);
   }
 });
